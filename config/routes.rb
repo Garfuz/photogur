@@ -4,11 +4,6 @@ end
 
 Rails.application.routes.draw do
   get 'pictures' => 'pictures#index'
-end
-
-
-Rails.application.routes.draw do
-  get 'pictures' => 'pictures#index'
   get 'pictures/:id' => 'pictures#show'
 end
 
@@ -26,4 +21,13 @@ Rails.application.routes.draw do
   root 'pictures#index'
   get 'pictures' => 'pictures#index'
 
+end
+
+Rails.application.routes.draw do
+  get 'pictures/:id/edit' => "pictures#edit"
+  patch 'pictures/:id' => "pictures#update"
+end
+
+Rails.application.routes.draw do
+  delete 'pictures/:id' => 'pictures#destroy'
 end
