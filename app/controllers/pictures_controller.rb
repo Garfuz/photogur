@@ -1,46 +1,20 @@
 class PicturesController < ApplicationController
-end
-
-class PicturesController < ApplicationController
-  def index
-  end
-end
-
-class PicturesController < ApplicationController
 
   def index
     @pictures = Picture.all
   end
 
-end
-
-
-class PicturesController < ApplicationController
-
   def show
     @picture = Picture.find(params[:id])
   end
 
-end
-
-class PicturesController < ApplicationController
   def new
     @picture = Picture.new
   end
 
   def create
-  end
-end
-
-class PicturesController < ApplicationController
-
-  def create
     render text: "Received POST request to '/pictures' with the data URL: #{params}"
   end
-
-end
-
-class PicturesController < ApplicationController
 
   def edit
     @picture = Picture.find(params[:id])
@@ -60,9 +34,7 @@ class PicturesController < ApplicationController
       render :edit
     end
   end
-end
 
-class PicturesController < ApplicationController
   def destroy
     @picture = Picture.find(params[:id])
     @picture.destroy
